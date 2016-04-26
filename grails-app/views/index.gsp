@@ -12,7 +12,7 @@
 <body>
 
 	<div class="wrapper">
-		<g:form controller="login" action="login" name="formUserLogin"
+		<g:form controller="pedidosYa" action="login" name="formUserLogin"
 			class="form-signin">
 
 			<h2 class="form-signin-heading">PedidosYa</h2>
@@ -28,12 +28,20 @@
 
 		</g:form>
 		<g:if test="${params.appAuthenticateFailed == 'true'}">
-
 			<div class="alert alert-danger alert-error">
 				<strong> Ha ocurrido un error al intentar acceder al sitio.</strong>
 			</div>
-
 		</g:if>
+			<g:if test="${params.userAuthenticateFailed == 'true'}">
+			<div class="alert alert-danger alert-error">
+				<strong>La contrase&ntilde;a y/o usuario que ingresaste es incorrecta.</strong>
+			</div>
+		</g:if>
+		<g:if test="${params.getUserAccountFailed == 'true'}">
+			<div class="alert alert-danger alert-error">
+				<strong> Ha ocurrido un error al intentar obtener los datos del usuario.</strong>
+			</div>
+		</g:if>						
 	</div>
 
 </body>

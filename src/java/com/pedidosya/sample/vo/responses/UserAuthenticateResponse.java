@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Esta clase contiene los atributos necesarios a la hora de mapear una
- * respuesta json del servicio para obtener el token de apliacion.
+ * respuesta json del servicio para obtener el token de login de usuario.
  * 
  * @author Gaspar Medina
  * @date - 24-04-2016
  *
  */
-public class AppAuthenticateResponse {
+public class UserAuthenticateResponse {
 
 	public static final String SUCCES_CODE = "0";
 
@@ -21,7 +21,7 @@ public class AppAuthenticateResponse {
 	@SerializedName("messages")
 	private String[] messages;
 
-	public AppAuthenticateResponse() {
+	public UserAuthenticateResponse() {
 		this.code = SUCCES_CODE;
 	}
 

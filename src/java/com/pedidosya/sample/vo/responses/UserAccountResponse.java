@@ -4,40 +4,57 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Esta clase contiene los atributos necesarios a la hora de mapear una
- * respuesta json del servicio para obtener el token de apliacion.
+ * respuesta json del servicio para obtener los datos del usuario.
  * 
  * @author Gaspar Medina
  * @date - 24-04-2016
  *
  */
-public class AppAuthenticateResponse {
+public class UserAccountResponse {
 
 	public static final String SUCCES_CODE = "0";
 
-	@SerializedName("access_token")
-	private String accesToken;
+	@SerializedName("name")
+	private String name;
+	@SerializedName("lastName")
+	private String lastName;
 	@SerializedName("code")
 	private String code;
 	@SerializedName("messages")
 	private String[] messages;
 
-	public AppAuthenticateResponse() {
+	public UserAccountResponse() {
 		this.code = SUCCES_CODE;
 	}
 
 	/**
-	 * @return the accesToken
+	 * @return the name
 	 */
-	public String getAccesToken() {
-		return accesToken;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * @param accesToken
-	 *            the accesToken to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setAccesToken(String accesToken) {
-		this.accesToken = accesToken;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * @param lastName
+	 *            the lastName to set
+	 */
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	/**
